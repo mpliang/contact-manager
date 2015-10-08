@@ -33,9 +33,10 @@ router.post('/', function(req, res, next) {
 
 router.put('/:contactId', function(req,res) {
   Contact.findById(req.params.contactId, function(err, contact) {
-    console.log(req.body);
-    console.log(contact);
-    contact.save(function(err, savedContact){
+    console.log('body: ', req.body);
+    console.log('contact: ', contact);
+    contact = req.body;
+    contact.save(function(err, savedContact) {
       res.send(savedContact);
     });
   });

@@ -9,9 +9,9 @@ app.controller('editController', function ($scope, $http, $state, $stateParams) 
     console.log(error);
   });
 
-  $scope.edit = function(id) {
-    console.log(id);
-    $http.put('http://localhost:3000/' + id)
+  $scope.edit = function(contact) {
+    console.log(contact);
+    $http.put('http://localhost:3000/' + contact._id, contact)
       .then(function(data){
         console.log(data);
         // $state.go($state.current, {}, {reload: true});
