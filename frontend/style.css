@@ -1,0 +1,28 @@
+#contactThumb {
+  height: auto;
+  width: auto;
+  max-width: 142px;
+  max-height: 100px;
+  /*width: 242px;
+  height: 200px;*/
+}
+
+.thumbnail {
+  text-align: center;
+  display: inline-block;
+  height: 450px;
+  width: 300px;
+}
+
+#splash {
+  width:70%;
+  height: 50%;
+}
+
+.jumbotron {
+  padding: 10px;
+}
+
+form {
+  margin-top: 15px;
+}

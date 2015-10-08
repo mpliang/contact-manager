@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+  <h1>Contacts</h1>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="n in contactList track by $index">
+      <div class="thumbnail">
+        <img ng-src="{{n.url}}" id="contactThumb">
+        <div class="caption">
+          <h3>{{n.name}}</h3>
+          <p><strong>Email:</strong>
+            {{n.email}}</p>
+          <p><strong>Phone number:</strong>
+            {{n.phone}}</p>
+          <p><strong>Description:</strong>
+            {{n.description}}</p>
+          <button class="btn btn-warning" ui-sref="contactEdit({contactId: n._id})">Edit</button>
+          <button class="btn btn-primary" ng-click="delete(n._id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

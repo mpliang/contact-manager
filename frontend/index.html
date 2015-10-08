@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="contactApp">
+  <head>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  </head>
+
+  <body ng-controller="mainController">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">Contact Manager</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a ui-sref="add"><i class="fa fa-plus-circle"></i> Add Contact</a></li>
+                <!-- <li>
+                  <a ui-sref="add">
+                    <i class="fa fa-plus-circle"></i>
+                    Add a Contact</a>
+                </li> -->
+
+              </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main">
+      <div ui-view></div>
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/src/module.js"></script>
+    <script src="/src/controllers/home.js"></script>
+    <script src="/src/controllers/add.js"></script>
+    <script src="/src/controllers/edit.js"></script>
+    <script src="/src/config.js"></script>
+  </body>
+
+</html>
